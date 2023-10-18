@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "c3aedca1-f8be-4a26-a1a4-8d24d5a43f2d",
+		"name": "Habit tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Log habit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/habit/log-habit",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"log-habit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"madhurangasgk+7@gmail.com\",\r\n    \"name\": \"keshan\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"madhurangasgk+5@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srM0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ0OTNkM2E0NDllMmIwYjZlMmY2IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk2OTQxNjQyLCJleHAiOjE2OTY5NDUyNDJ9.3j2eo22BVxz6Pk7kEPfChZTw3n6gWqwZ-kw5jP1x2u0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"madhuranga\",\r\n    \"age\": 29\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/profile",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send accoutn delete request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srM0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ0OTNkM2E0NDllMmIwYjZlMmY2IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk2OTQxNjQyLCJleHAiOjE2OTY5NDUyNDJ9.3j2eo22BVxz6Pk7kEPfChZTw3n6gWqwZ-kw5jP1x2u0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/profile/delete-request",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"delete-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get accoutn delete request Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ3N2ZhMmU0Mzc5ZGFjYzdkOTgyIiwidXNlcl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2OTY5NDE5NjEsImV4cCI6MTY5Njk0NTU2MX0.h5zt9GVG8ShbAvrvTpetOkZi2a8cihx36UNBP3OTULo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/profile/delete-requests",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"delete-requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ3N2ZhMmU0Mzc5ZGFjYzdkOTgyIiwidXNlcl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2OTY5NDE5NjEsImV4cCI6MTY5Njk0NTU2MX0.h5zt9GVG8ShbAvrvTpetOkZi2a8cihx36UNBP3OTULo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/profile/65254493d3a449e2b0b6e2f6",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"65254493d3a449e2b0b6e2f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srM0BnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ4N2NlZmU3ZGJjN2UwY2E2NWI4IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk3MDkxNjQxLCJleHAiOjE2OTcwOTUyNDF9.mq56Mc0pTDKX97BiGX2NKqPi5v30Eyr4iXv35xt_2JI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/profile",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact help",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"madhurangasgk+7@gmail.com\",\r\n    \"name\": \"keshan\",\r\n    \"question\": \"sample queston 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/help-center",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"help-center"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get help center questions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ3N2ZhMmU0Mzc5ZGFjYzdkOTgyIiwidXNlcl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2OTcwOTI4ODcsImV4cCI6MTY5NzA5NjQ4N30.ix7IzdnaRkFlbQbhKrTRG7emDZ7SILUqKnwZn6TA8y0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/user/help-center",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"help-center"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "habit",
+			"item": [
+				{
+					"name": "Create predefined habits",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ3N2ZhMmU0Mzc5ZGFjYzdkOTgyIiwidXNlcl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2OTY5NTkwMTUsImV4cCI6MTY5Njk2MjYxNX0.xKdg0RWshZiVchvY_hk_L_Uj8gC_wIlIUodejHn4r0Q",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"target_value\": \"1\",\r\n    \"name\": \"habit 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/habit/predefined-habit/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"predefined-habit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit predefined habits",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ3N2ZhMmU0Mzc5ZGFjYzdkOTgyIiwidXNlcl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2OTY5NTkwMTUsImV4cCI6MTY5Njk2MjYxNX0.xKdg0RWshZiVchvY_hk_L_Uj8gC_wIlIUodejHn4r0Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/habit/predefined-habit/65258a4197577be510beb9fb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"predefined-habit",
+								"65258a4197577be510beb9fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit predefined habits Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNTQ3N2ZhMmU0Mzc5ZGFjYzdkOTgyIiwidXNlcl90eXBlIjoiYWRtaW4iLCJpYXQiOjE2OTY5NTkwMTUsImV4cCI6MTY5Njk2MjYxNX0.xKdg0RWshZiVchvY_hk_L_Uj8gC_wIlIUodejHn4r0Q",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"target_value\": \"2\",\r\n    \"name\": \"habit 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/habit/predefined-habit/65258a4197577be510beb9fb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"predefined-habit",
+								"65258a4197577be510beb9fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create habits",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNjA2NWU0MjY3NmVkZjM0ZDhmYTM4IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk2OTkwODU0LCJleHAiOjE2OTY5OTQ0NTR9.2mk_gxXN2U6HxBhMNJ1SL3wYU2ZCeoH5RzlDbMnlK9M",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"target_value\": \"1\",\r\n    \"name\": \"habit 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/habit/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of user habits",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNjA2NWU0MjY3NmVkZjM0ZDhmYTM4IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk2OTkwODU0LCJleHAiOjE2OTY5OTQ0NTR9.2mk_gxXN2U6HxBhMNJ1SL3wYU2ZCeoH5RzlDbMnlK9M",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"target_value\": \"1\",\r\n    \"name\": \"habit 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/habit/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user habit by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNjA2NWU0MjY3NmVkZjM0ZDhmYTM4IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk2OTkwODU0LCJleHAiOjE2OTY5OTQ0NTR9.2mk_gxXN2U6HxBhMNJ1SL3wYU2ZCeoH5RzlDbMnlK9M",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/habit/6526075c9c7fe308cdeb38be",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"6526075c9c7fe308cdeb38be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user habit by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNjA2NWU0MjY3NmVkZjM0ZDhmYTM4IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk2OTkwODU0LCJleHAiOjE2OTY5OTQ0NTR9.2mk_gxXN2U6HxBhMNJ1SL3wYU2ZCeoH5RzlDbMnlK9M",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/habit/6526075c9c7fe308cdeb38be",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"6526075c9c7fe308cdeb38be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log habit progress",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNjA2NWU0MjY3NmVkZjM0ZDhmYTM4IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk3MDAwNzk5LCJleHAiOjE2OTcwMDQzOTl9.WDD6Yg8Esn7tz8nwzEQ9Or9SOAWa2Y5H2kd5QOY3-OE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"completed_value\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/habit/log-progress/6526065f42676edf34d8fa3b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"log-progress",
+								"6526065f42676edf34d8fa3b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get habit progress of a day",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hZGh1cmFuZ2FzZ2srNkBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjUyNjA2NWU0MjY3NmVkZjM0ZDhmYTM4IiwidXNlcl90eXBlIjoiZ2VuZXJhbF91c2VyIiwiaWF0IjoxNjk3MDAwNzk5LCJleHAiOjE2OTcwMDQzOTl9.WDD6Yg8Esn7tz8nwzEQ9Or9SOAWa2Y5H2kd5QOY3-OE",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/habit/progress/2023-10-25",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"habit",
+								"progress",
+								"2023-10-25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
